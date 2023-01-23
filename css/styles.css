@@ -1,0 +1,221 @@
+/** Imports **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+    /* light mode color-scheme */
+    --calm-selected-background: #05386b;
+    --calm-main-background: #5cdb95;
+    --calm-alt-background: #379683;
+    --calm-main-text: #edf5e1;
+    --calm-alt-text: #8ee4af;
+
+    /* dark mode color-scheme */
+    --bold-selected-background: #c3073f;
+    --bold-main-background: #1a1a1d;
+    --bold-alt-background: #4e4e50;
+    --bold-main-text: #950740;
+    --bold-alt-text: #6f2232;
+
+    /* common mode color -scheme*/
+    --simple-main-highlight-text: #c5c6c7;
+    --simple-alt-highlight-text: #66fcf1;
+    --simple-dark-light-background: #0b0c10;
+    --simple-light-dark-background: #1f2833;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--calm-main-background);
+    box-shadow: 0px -2px 0px var(--calm-alt-background);
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--calm-main-text);
+}
+
+h2 {
+    font-size: 20px;
+    font-variant: small-caps;
+    color: var(--calm-alt-text);
+}
+
+p {
+    font-family: Kanit, sans-serif;
+    text-align: center;
+    color: var(--calm-main-text);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--calm-main-text);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+hr {
+    width: 80%;
+    height: 4px;
+    background-color: var(--calm-main-background);
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--calm-main-background);
+    box-shadow: 0px 2px 0px var(--calm-alt-background);
+}
+
+#navbar ul {
+    display: flex;
+    margin-right: 32px;
+}
+
+#navbar ul a {
+    display: block;
+    padding: 10px;
+}
+
+#navbar ul a:hover {
+    background: var(--calm-selected-background);
+    color: var(--calm-alt-text);
+}
+
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('https://static.vecteezy.com/system/resources/previews/004/543/195/original/abstract-white-background-with-3d-circles-pattern-free-vector.jpg') var(--calm-main-background);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: var(--calm-alt-background);
+    background-image: linear-gradient(var(--calm-main-background) 0%, var(--calm-alt-background) 10%);
+}
+
+#about-section p {
+    text-align: justify;
+    width: 65%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: var(--calm-alt-background);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 32px;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 64px;
+}
+
+.project-tile {
+    background: var(--simple-light-dark-background);
+    box-shadow: 2px 2px 5px var(--simple-dark-light-background);
+    border-radius: 5px;
+}
+
+.highlight {
+   color: var(--simple-light-dark-background);
+}
+
+.project-tile:hover .highlight {
+    color: var(--bold-selected-background);
+    transition: color 0.5s ease-in;
+}
+
+.project-image {
+    height: calc(100% - 30px);
+    width: 100%;
+    object-fit: cover;
+}
+
+/*** Contact Section ***/
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: var(--simple-dark-light-background);
+}
+
+#contact-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#contact-section p {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+    flex-wrap: wrap;
+}
